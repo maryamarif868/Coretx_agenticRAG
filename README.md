@@ -3,20 +3,21 @@
 Cortex is a full-stack, multi-user, agentic Retrieval-Augmented Generation (RAG) system. Users sign up, upload their own documents (PDF/TXT or pasted text), and ask questions, by text or voice, that are answered strictly from the uploaded content, with inline citations, guardrails, and a self-evaluating pipeline.
 
 ---
-
 ## Tech Stack
 
-**Backend:** Python, FastAPI, Uvicorn
-**Agent orchestration:** LangChain, LangGraph
-**Vector store:** ChromaDB (persisted to disk, one isolated collection per user)
-**LLM provider:** Groq (with multi-key failover)
-**Embeddings:** HuggingFace `sentence-transformers`
-**Database:** SQLite (chat sessions, messages, user accounts)
-**Auth:** JWT (python-jose), bcrypt password hashing (passlib), Google OAuth
-**Evaluation:** RAGAS (LLM-as-judge)
-**Speech:** Groq Whisper (speech-to-text), gTTS (text-to-speech)
-**Observability:** LangSmith tracing
-**Frontend:** React + Vite
+- **Backend:** Python, FastAPI, Uvicorn
+- **Agent orchestration:** LangChain, LangGraph
+- **Vector store:** ChromaDB (persisted to disk, one isolated collection per user)
+- **LLM provider:** Groq (with multi-key failover)
+- **Embeddings:** HuggingFace `sentence-transformers`
+- **Database:** PostgreSQL on Supabase (chat sessions, messages, user accounts)
+- **Ingestion:** PDF/TXT upload, pasted text, website URL scraping
+- **Auth:** JWT (python-jose), bcrypt password hashing (passlib), Google OAuth
+- **Evaluation:** RAGAS (LLM-as-judge)
+- **Speech:** Groq Whisper (speech-to-text), gTTS (text-to-speech)
+- **Observability:** LangSmith tracing
+- **Frontend:** React + Vite
+- **Deployment:** Docker, Railway
 
 ---
 
